@@ -66,10 +66,10 @@ class PostController extends Controller
      */
     public function posts(Request $request)
     {
-        $posts = Post::orderBy('created_at','desc')->with('user')->get();
+        $posts = Post::orderBy('created_at','desc')->with('user','comments.user')->get();
         return response()->json([
             'message' => 'success',
-            'data' => $posts->load('comments.user'),
+            'data' => $posts,
         ], 200);
     }
 
