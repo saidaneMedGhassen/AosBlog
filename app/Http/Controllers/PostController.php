@@ -33,7 +33,7 @@ class PostController extends Controller
         $post->save();
         return response()->json([
            'message'=>'post created successfuly',
-           'data'=>$post->load('user'),
+           'data'=>$post->load('user','comments'),
         ],200);
     }
     /**
