@@ -7,6 +7,7 @@ Installation:
 3.	Exécuter la commande composer install
 4.	Exécuter la commande npm install
 5.	Copier le fichier .env.example et changer le nom en .env
+6.	Exécuter la commande php artisan key:generate
 6.	Exécuter la commande php artisan migrate
 7.	Exécuter la commande php artisan passport:install
 8.	Exécuter la commande php artisan serve
